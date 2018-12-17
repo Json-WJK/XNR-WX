@@ -1,0 +1,12 @@
+{
+  "name": "count-picker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./count-picker.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

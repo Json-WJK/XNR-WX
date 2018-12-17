@@ -1,0 +1,12 @@
+{
+  "name": "line",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./line.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

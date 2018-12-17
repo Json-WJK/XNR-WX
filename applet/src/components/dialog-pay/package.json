@@ -1,0 +1,12 @@
+{
+  "name": "dialog-pay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dialog-pay.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

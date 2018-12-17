@@ -1,0 +1,110 @@
+{
+    "extEnable": true,
+    "extAppid": "wx15bdba8ae1f6cb1a",
+    "directCommit": false,
+    "ext": {
+        "config_id": 7708,
+        "merchant_id": 3533,
+        "api_host": "http://www.xiaoniren.cn",
+        "img_host": "http://www.xiaoniren.cn",
+        "config": [
+            {
+                "name": "swiper", 
+                "imgs": [
+                    {
+                        "url": "//img12.360buyimg.com/jrpmobile/jfs/t11149/181/856008463/68797/dc303e9/59f97baeN3cdae084.jpg?width=750&height=400"
+                    },
+                    {
+                        "url": "//img12.360buyimg.com/jrpmobile/jfs/t11149/181/856008463/68797/dc303e9/59f97baeN3cdae084.jpg?width=750&height=400"
+                    },
+                    {
+                        "url": "//img12.360buyimg.com/jrpmobile/jfs/t11149/181/856008463/68797/dc303e9/59f97baeN3cdae084.jpg?width=750&height=400"
+                    }
+                ],
+                "indicator-dots": true,
+                "indicator-color": "rgba(0,0,0,0.6)",
+                "indicator-active-color": "red",
+                "autoplay": true,
+                "duration": 1000,
+                "interval": 5000,
+                "circular": true,
+                "height": 320
+            },
+            {
+                "name": "location",
+                "shopName": "我的地址",
+                "locationName": "北京市大兴区小泥人",
+                "color": "red",
+                "size": "32"
+            },
+            {
+                "name": "label",
+                "label": "精选",
+                "size": "42",
+                "color": "red"
+            },
+            {
+                "name": "listOne",
+                "img": [],
+                "color": "red",
+                "productName": "我是商品名称1",
+                "price": "33",
+                "iconColor": "green",
+                "size": "32",
+                "iconSize": "42"
+            },
+            {
+                "name": "listTwo",
+                "img": [],
+                "color": "red",
+                "productName": "我是商品名称1",
+                "price": "33",
+                "iconColor": "green",
+                "size": "32",
+                "iconSize": "42"
+            },
+            {
+                "name": "listThree",
+                "img": [],
+                "color": "red",
+                "productName": "我是商品名称1",
+                "price": "33",
+                "iconColor": "green",
+                "size": "32",
+                "iconSize": "42"
+            },
+            {
+                "name": "listFour",
+                "img": [],
+                "color": "red",
+                "productName": "我是商品名称1",
+                "price": "33",
+                "iconColor": "green",
+                "size": "32",
+                "iconSize": "42"
+            },
+            {
+                "name": "listFive",
+                "img": [],
+                "color": "red",
+                "productName": "我是商品名称1",
+                "price": "33",
+                "iconColor": "green",
+                "size": "32",
+                "iconSize": "42"
+            },
+            {
+                "name": "label",
+                "label": "再加一个广告"
+            },
+            {
+                "name": "ad",
+                "url": "xxx",
+                "image": "xxx"
+            }
+        ]
+    },
+    "extPages": {},
+    "window": {},
+    "networkTimeout": {}
+}

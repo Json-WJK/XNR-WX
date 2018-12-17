@@ -1,0 +1,9 @@
+bg-image($url,$width,$height,$repeat)
+    @media (-webkit-max-device-pixel-ratio: 2),(max-device-pixel-ratio: 2)
+        background-image url($url + "@2x.png")
+        background-size $width $height
+        background-repeat $repeat
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+        background url($url + "@3x.png")
+        background-size $width $height
+        background-repeat $repeat
