@@ -25,7 +25,7 @@
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
     @font-face {
         font-family: "wack";
-        src: url('//at.alicdn.com/t/font_944094_40ectvokd0a.ttf?t=1545040056138') format('truetype');
+        src: url('//at.alicdn.com/t/font_944094_ldsvmb6ha6g.ttf?t=1545097628819') format('truetype');
     }
 
     .wack {
@@ -37,7 +37,7 @@
     }
     .wack-daohangtubiao:before { content: "\e653"; }
     .wack-dianhuahover:before { content: "\e61f"; }
-    .wack-dingwei:before { content: "\e610"; }
+    .wack-dingwei-r:before { content: "\e610"; }
     .wack-icon--:before { content: "\e78e"; }
     .wack-sousuo:before { content: "\e64d"; }
 </style>

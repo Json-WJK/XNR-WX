@@ -1,6 +1,8 @@
 <template>
     <div class="seek3">
-        <input type="text" placeholder="输入搜索内容" :style="{textAlign}" @focus="focusChange('left')" @blur="focusChange('center')">
+        <div>
+            <input type="text" placeholder="输入搜索内容" @click="seekJump">
+        </div>
     </div>
 </template>
 <script>
@@ -10,13 +12,13 @@
         },
         data(){
             return{
-                textAlign:"center"
+                
             }
         },
         methods:{
-            focusChange(fon){
-                this.textAlign=fon
-            },
+            seekJump(){
+                console.log(1)
+            }
         }
     }
 </script>
@@ -25,14 +27,15 @@
         background:#fff;
         padding:10rpx 0;
         width:100%;
-        input{
+        div{
             width:90%;
             margin:0 auto;
-            background:#E5E5E5;
-            border-radius: 25rpx;
+            input{
+                background:#E5E5E5;
+                border-radius: 25rpx;
+                text-align: center;
+            }
         }
-    }
-    .center{
-        text-align: center;
+        
     }
 </style>

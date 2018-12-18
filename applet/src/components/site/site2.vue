@@ -1,12 +1,12 @@
 <template>
     <div class="site2" style="margin:10rpx;">
-        <div class="body">
+        <div class="body" @click="getLocation">
             <div class="body-l">
                 <div class="">距离最近：店名(某某分店)</div>
                 <div class="site">北京市大兴区中关村天华大街启航大厦3楼</div>
             </div>
             <div class="body-r">
-                <span><wk-icon :type="type" :color="color" :size="size"></wk-icon></span>
+                <span @click.stop="call"><wk-icon type="dianhuahover" color="#CECECE" size="60"></wk-icon></span>
             </div>
         </div>
     </div>
@@ -15,13 +15,30 @@
 import wkIcon from '../icon'
     export default{
         components:{
-            wkIcon
+            wkIcon                  
         },
         data(){
             return{
-                type:"dianhuahover",
-                size:60,
-                color:'#CECECE'
+                
+            }
+        },
+        methods:{
+            getLocation(){
+                wx.getLocation({
+                    type: 'wgs84',
+                    success(res) {
+                        const latitude = res.latitude
+                        const longitude = res.longitude
+                        const speed = res.speed
+                        const accuracy = res.accuracy
+                        console.log(latitude,longitude,speed,accuracy)
+                    }
+                })
+            },
+            call(){
+                wx.makePhoneCall({
+                    phoneNumber: '123456'
+                })
             }
         }
     }
@@ -55,6 +72,5 @@ import wkIcon from '../icon'
                 margin-top:-18rpx;
             }
         }
-       
     }
 </style>

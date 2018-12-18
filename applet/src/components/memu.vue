@@ -8,10 +8,24 @@
 <script>
     export default{
         props:{
-            options:Object
+            // options:Object
         },
         data(){
             return{
+                options:{
+                    "name":"memu",
+                    "ify":[
+                        "全部",
+                        "快餐",
+                        "米面",
+                        "麻辣烫",
+                        "饺子",
+                        "特色小吃",
+                        "烧烤"
+                    ],
+                    "background":"#fff",
+                    "highlight":"#f12e24"
+                },
                 highlight:0
             }
         },
@@ -24,14 +38,17 @@
 </script>
 <style lang="scss" scoped>
     .memu{
-        margin:10px 0;
+        margin:0 0 10px 0;
         box-sizing: border-box;
         overflow-x: auto;
         height:70rpx;
         line-height:60rpx;
         .box{
             white-space:nowrap;
+            height:100%;
             .items{
+                display: inline-block;
+                height:100%;
                 padding:0 20rpx;
                 font-size:17px;
                 color:#333;

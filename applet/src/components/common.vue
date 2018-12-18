@@ -1,5 +1,6 @@
 <template>
     <div>
+        <memu v-if="options.type === 'carousel' && options.options.styles === '1'"></memu>
         <site1 v-if="options.type === 'carousel' && options.options.styles === '1'"></site1>
         <site2 v-if="options.type === 'carousel' && options.options.styles === '1'"></site2>
         <site3 v-if="options.type === 'carousel' && options.options.styles === '1'"></site3>
@@ -7,7 +8,6 @@
         <discount2 :options="options" v-if="options.type === 'carousel' && options.options.styles === '1'"></discount2>
         <discount3 :options="options" v-if="options.type === 'carousel' && options.options.styles === '1'"></discount3>
         <space :options="options.options" v-if="options.type === 'componentDistance'"></space>
-        <memu :options="options" v-if="options.name === 'memu'"></memu>
         <navigation2 :options="options.options" v-if="options.type === 'navigation' && options.options.styles === '2'"></navigation2>
         <navigation1 :options="options.options" v-if="options.type === 'navigation' && options.options.styles === '1'"></navigation1>
         <seek4 :options="options.options" v-if="options.type === 'search' && options.options.styles === '4'"></seek4>

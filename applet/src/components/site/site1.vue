@@ -1,15 +1,15 @@
 <template>
     <div class="site1" style="margin:10rpx;">
-        <div class="body">
+        <div class="body" @click="getLocation">
             <div class="icon">
-                <span><wk-icon :type='dingwei' :color="color" :size="size"></wk-icon></span>
+                <span><wk-icon type='dingwei-r' color="#333" size="50"></wk-icon></span>
             </div>
             <div class="body-l">
                 <div class="">距离最近：店名(某某分店)</div>
                 <div class="site">北京市大兴区中关村天华大街启航大厦3楼</div>
             </div>
             <div class="body-r">
-                <span><wk-icon :type="type" :color="color" :size="size"></wk-icon></span>
+                <span @click.stop="call"><wk-icon type="dianhuahover" color="#CECECE" size="60"></wk-icon></span>
             </div>
         </div>
     </div>
@@ -22,9 +22,24 @@ import wkIcon from '../icon'
         },
         data(){
             return{
-                type:"dianhuahover",
-                size:60,
-                color:'#CECECE'
+                getLocation(){
+                    console.log(1)
+                    wx.getLocation({
+                        type: 'wgs84',
+                        success(res) {
+                            const latitude = res.latitude
+                            const longitude = res.longitude
+                            const speed = res.speed
+                            const accuracy = res.accuracy
+                            console.log(res)
+                        }
+                    })
+                },
+                call(){
+                    wx.makePhoneCall({
+                        phoneNumber: '123456'
+                    })
+                }
             }
         }
     }
@@ -49,19 +64,23 @@ import wkIcon from '../icon'
                 height:110rpx;
                 line-height:55rpx;
                 color:#222;
+                margin-left:-60rpx;
                 .site{
                     color:#666;
                 }
                 :not(.site){
-                    font-size:15px;
+                    font-size:14px;
                 }
             }
             .body-r{
                 width:50rpx;
                 height:50rpx;
                 margin-top:-18rpx;
+                box-sizing: border-box;
+                span{
+                    height:100%;
+                }
             }
         }
-       
     }
 </style>

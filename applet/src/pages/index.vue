@@ -26,15 +26,15 @@
             // }),
             this.config = wx.getExtConfigSync().config
             this.config = data
-            getCategories().then(res => {
-                console.log(res)
-            })
-            getFoods({typeId:1,restaurantId:1}).then(res => {
-                console.log(res)
-            })
-            getExtJson().then(res => {
-                console.log(res)
-            })
+            // getCategories().then(res => {
+            //     console.log(res)
+            // })
+            // getFoods({typeId:1,restaurantId:1}).then(res => {
+            //     console.log(res)
+            // })
+            // getExtJson().then(res => {
+            //     console.log(res)
+            // })
             
             //console.log(wx.getExtConfigSync())
         }

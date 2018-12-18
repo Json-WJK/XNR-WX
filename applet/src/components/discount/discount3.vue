@@ -1,7 +1,7 @@
 <template>
     <div class="discount3" style="margin:10rpx 0;">
         <div class="box">
-            <div class="body">
+            <div class="body" v-for="item in traversal" :key="item">
                 <div class="body-l">
                     <div class="sum">
                         <span>50</span>元
@@ -9,29 +9,7 @@
                 </div>
                 <div class="body-r">
                     <div class="condition">满100元使用</div>
-                    <div class="get"><span>立即领取</span></div>
-                </div>
-            </div>
-            <div class="body">
-                <div class="body-l">
-                    <div class="sum">
-                        <span>50</span>元
-                    </div>
-                </div>
-                <div class="body-r">
-                    <div class="condition">满100元使用</div>
-                    <div class="get"><span>立即领取</span></div>
-                </div>
-            </div>
-            <div class="body">
-                <div class="body-l">
-                    <div class="sum">
-                        <span>50</span>元
-                    </div>
-                </div>
-                <div class="body-r">
-                    <div class="condition">满100元使用</div>
-                    <div class="get"><span>立即领取</span></div>
+                    <div class="get"><span @click="getDiscount()">立即领取</span></div>
                 </div>
             </div>
         </div>
@@ -41,7 +19,17 @@
     export default{
         data(){
             return{
-
+                traversal:[1,2,3]
+            }
+        },
+        methods:{
+            getDiscount(){
+                wx.showToast({
+                    title: '领取成功',
+                    icon: 'none',
+                    duration: 1500,
+                    mask: false,
+                });
             }
         }
     }
@@ -59,7 +47,7 @@
             height:154rpx;
             border-radius:8rpx;
             .body{
-                width:45%;
+                width:44%;
                 height:144rpx;
                 background:#fff;
                 border-radius:8rpx;
@@ -73,7 +61,7 @@
                     border-top-left-radius: 8rpx;
                     border-bottom-left-radius: 8rpx;
                     background:linear-gradient(0deg,rgba(243,54,32,1),rgba(243,130,34,1));
-                    width:103rpx;
+                    width:128rpx;
                     height:100%;
                     line-height:144rpx;
                     .sum{
@@ -83,7 +71,7 @@
                     }    
                 }
                 .body-r{
-                    width:70%;
+                    width:60%;
                     height:100%;
                     box-sizing:border-box;
                     padding:0 32rpx;
@@ -107,7 +95,6 @@
                         font-size:12px;
                     }
                 }
-                
             }
         }
         .box::-webkit-scrollbar {
