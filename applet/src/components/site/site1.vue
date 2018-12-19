@@ -2,7 +2,7 @@
     <div class="site1" style="margin:10rpx;">
         <div class="body" @click="getLocation">
             <div class="icon">
-                <span><wk-icon type='dingwei-r' color="#333" size="50"></wk-icon></span>
+                <span><wk-icon type='dingwei1' color="#333" size="50"></wk-icon></span>
             </div>
             <div class="body-l">
                 <div class="">距离最近：店名(某某分店)</div>

@@ -33,10 +33,12 @@
             </div>
         </div>
         <product-show :integralList="integralList" @go-detail="goIntegralDetail"></product-show>
+        <!-- <tab-ber name="tab1"></tab-ber> -->
     </div>
 </template>
 
 <script>
+    import tabBer from '../components/tabBer/tabBer.vue'
     import wkIcon from '../components/icon/icon'
     import productShow from '../components/product-show/product-show'
     import { getIntegralList,getIntegralDetailed } from '../api/api'
@@ -47,7 +49,8 @@
         name: "integral",
         components: {
             wkIcon,
-            productShow
+            productShow,
+            tabBer
         },
         data() {
             return {

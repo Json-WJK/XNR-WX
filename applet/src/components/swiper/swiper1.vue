@@ -30,7 +30,7 @@
             }
         },
         methods: {
-            current(e) {
+            current(e){
                 this.swiperCurrent=e.mp.detail.current
             },
             navigation(i){

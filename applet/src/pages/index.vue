@@ -7,7 +7,7 @@
 <script>
     import { getCategories, getFoods, getExtJson } from '@/api'
     import common from '../components/common'
-    import {data} from '../../dist/data.js'
+    import data from '../data.js'
     export default {
         data () {
             return {
@@ -24,8 +24,9 @@
             // wx.setNavigationBarTitle({
             //     title: '动态修改的页面'
             // }),
-            this.config = wx.getExtConfigSync().config
+            this.config = wx.getExtConfigSync ? wx.getExtConfigSync().config : {}
             this.config = data
+            console.log(data)
             // getCategories().then(res => {
             //     console.log(res)
             // })
@@ -42,5 +43,5 @@
 </script>
 
 <style scoped lang="scss">
-
+    
 </style>

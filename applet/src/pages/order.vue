@@ -196,12 +196,12 @@ page {
                     :balance=balance :balanceNo=balanceNo
                     @dialogpayClick=dialogpayClick @topUp=topUp>
         </wk-dialog-pay>
-
+        <tab-ber name="tab1"></tab-ber>
     </div>
-
 </template>
 
 <script>
+import tabBer from '../components/tabBer/tabBer.vue'
 import { getOrderList, payment, getVipCard, getOrderInfo, cancelOrder, getExtJson } from '@/api'
 import wkNavbar from '@c/navbar'
 import wkPrice from '@c/price'
@@ -224,7 +224,8 @@ export default {
         wkDialogPay,
         wkCountDown,
         CountDown,
-        zkTimeDown
+        zkTimeDown,
+        tabBer
     },
     data() {
         return {

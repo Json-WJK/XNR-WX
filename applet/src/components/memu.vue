@@ -1,7 +1,7 @@
 <template>
     <div class="memu" :style="{background:options.background}">
         <div class="box">
-            <span v-for="(item,index) in options.ify" :key="index" class="items" :style="index==highlight?{color:options.highlight}:''" @click="ify(index)">{{item}}</span>
+            <span v-for="(item,index) in options.ify" :key="index" class="items" @click="ify(index)" :style="index==highlight?{color:options.highlight}:''">{{item}}</span>
         </div>
     </div>
 </template>

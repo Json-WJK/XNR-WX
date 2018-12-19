@@ -1,5 +1,6 @@
 <template>
     <div>
+        <tab-ber name="tab1"></tab-ber>
         <memu v-if="options.type === 'carousel' && options.options.styles === '1'"></memu>
         <site1 v-if="options.type === 'carousel' && options.options.styles === '1'"></site1>
         <site2 v-if="options.type === 'carousel' && options.options.styles === '1'"></site2>
@@ -38,6 +39,7 @@
 </template>
 
 <script>
+    import tabBer from './tabBer/tabBer.vue'
     import site1 from './site/site1.vue'
     import site2 from './site/site2.vue'
     import site3 from './site/site3.vue'
@@ -109,7 +111,8 @@
             discount3,
             site1,
             site2,
-            site3
+            site3,
+            tabBer
         },
         props: {
             options: Object

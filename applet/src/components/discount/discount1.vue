@@ -113,7 +113,7 @@
             -ms-filter: grayscale(100%); 
             -o-filter: grayscale(100%); 
             filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  
-            _filter:none; 
+            _filter:none;
         }
     }
 </style>

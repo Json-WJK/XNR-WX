@@ -3,6 +3,7 @@
 import { getOpenid, getVipCard, isLogin, getExtJson } from '@/api'
 export default {
     created() {
+        // wx.hideTabBar()
         console.log('小程序启动了')
         let openid = wx.getStorageSync('openid')
         if (!openid) {

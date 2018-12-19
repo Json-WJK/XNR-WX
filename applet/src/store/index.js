@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import wx from 'wx'
+import tabBarData from './tabbar'
 
 Vue.use(Vuex)
 
@@ -9,6 +10,7 @@ let paymentShoppingCart = wx.getStorageSync('paymentShoppingCart') || []
 
 const store = new Vuex.Store({
     state: {
+        ...tabBarData,
         selectedFoods: storageData,
         remarks: '口味、偏好等要求',
         tablesId: 0,
@@ -27,6 +29,9 @@ const store = new Vuex.Store({
         },
         paymentShoppingCart(state, data) {
             state.paymentShoppingCart = data
+        },
+        tabBarChange(state, data) {
+            
         }
     },
     actions: {
@@ -68,6 +73,20 @@ const store = new Vuex.Store({
         },
         setRemarks({ commit }, data) {
             commit('remarks', data)
+        },
+        setCurrentBar({ commit, state }, data) {
+            // 设置tabbar高亮
+            let newTabbar = tabBarData[data.name]
+            if (newTabbar) {
+                newTabbar.data.forEach((item, key) => {
+                    item.currentSelected = data.index == key
+                })
+                newTabbar = JSON.parse(JSON.stringify(newTabbar))
+                commit('tabChange', {
+                    name: data.name,
+                    newTabbar
+                })
+            }
         }
     }
 })

@@ -27,38 +27,38 @@ export default {
             "navigationBarTitleText": "奥特姆连锁餐厅",
             "navigationBarTextStyle": "black"
         },
-        "tabBar": {
-            "color": "#666666",
-            "selectedColor": "#F5A623",
-            "borderStyle": "black",
-            "backgroundColor": "#ffffff",
-            "list": [
-                {
-                    "pagePath": "pages/index",
-                    "text": "首页",
-                    "iconPath": "static/icon/index.png",
-                    "selectedIconPath": "static/icon/index_c.png"
-                },
-                {
-                    "pagePath": "pages/integral",
-                    "text": "积分商城",
-                    "iconPath": "static/icon/integral.png",
-                    "selectedIconPath": "static/icon/integral_c.png"
-                },
-                {
-                    "pagePath": "pages/order",
-                    "text": "订单",
-                    "iconPath": "static/icon/order.png",
-                    "selectedIconPath": "static/icon/order_c.png"
-                },
-                {
-                    "pagePath": "pages/member",
-                    "text": "我的",
-                    "iconPath": "static/icon/member.png",
-                    "selectedIconPath": "static/icon/member_c.png"
-                }
-            ]
-        }
+        // "tabBar": {
+        //     "color": "#666666",
+        //     "selectedColor": "#F5A623",
+        //     "borderStyle": "black",
+        //     "backgroundColor": "#ffffff",
+        //     "list": [
+        //         {
+        //             "pagePath": "pages/index",
+        //             "text": "首页",
+        //             "iconPath": "static/icon/index.png",
+        //             "selectedIconPath": "static/icon/index_c.png"
+        //         },
+        //         {
+        //             "pagePath": "pages/integral",
+        //             "text": "积分商城",
+        //             "iconPath": "static/icon/integral.png",
+        //             "selectedIconPath": "static/icon/integral_c.png"
+        //         },
+        //         {
+        //             "pagePath": "pages/order",
+        //             "text": "订单",
+        //             "iconPath": "static/icon/order.png",
+        //             "selectedIconPath": "static/icon/order_c.png"
+        //         },
+        //         {
+        //             "pagePath": "pages/member",
+        //             "text": "我的",
+        //             "iconPath": "static/icon/member.png",
+        //             "selectedIconPath": "static/icon/member_c.png"
+        //         }
+        //     ]
+        // }
 
 
     }

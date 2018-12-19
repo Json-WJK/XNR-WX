@@ -64,10 +64,12 @@
             </div>
         </div>
         <wk-toptips ref="toptips"></wk-toptips>
+        <tab-ber name="tab1"></tab-ber>
     </div>
 </template>
 
 <script>
+import tabBer from '../components/tabBer/tabBer.vue'
 import wkIcon from '../components/icon/icon'
 import wkToptips from '@c/toptips'
 import { getVipCard, isLogin } from '@/api'
@@ -82,7 +84,8 @@ export default {
     },
     components: {
         wkIcon,
-        wkToptips
+        wkToptips,
+        tabBer
     },
     computed: {
         transformPhone() {
