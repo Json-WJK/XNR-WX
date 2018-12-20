@@ -11,17 +11,17 @@
                     <div class="phone">{{transformPhone}}</div>
                 </div>
             </section >
-           <section class="header-top" v-else>
-               <div class="member-header-avatar" >
-                   <open-data type="userAvatarUrl"></open-data>
-               </div>
-               <div class="header-user">
-                   <div class="name">
-                       <open-data type="userNickName"></open-data>
-                   </div>
-                   <div class="phone">{{transformPhone}}</div>
-               </div>
-           </section>
+            <section class="header-top" v-else>
+                <div class="member-header-avatar" >
+                    <open-data type="userAvatarUrl"></open-data>
+                </div>
+                <div class="header-user">
+                    <div class="name">
+                        <open-data type="userNickName"></open-data>
+                    </div>
+                    <div class="phone">{{transformPhone}}</div>
+                </div>
+            </section>
 
         </div>
         <div class="member-content">
@@ -64,7 +64,7 @@
             </div>
         </div>
         <wk-toptips ref="toptips"></wk-toptips>
-        <tab-ber name="tab1"></tab-ber>
+        <tab-ber at=2></tab-ber>
     </div>
 </template>
 

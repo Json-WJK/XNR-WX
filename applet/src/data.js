@@ -333,6 +333,80 @@ const data = [
         lineHeight: '',
         background: 'red'
       }
+    },
+    {
+      name: "底部导航",
+      type: "navBottom",
+      currentSelect: false, // border样式判断
+      options: {
+        color: "#a4a4a",
+        background: "#fff",
+        selectColor: "#e02828",
+        selectBackground: "#fd890c",
+        items: [
+          {
+            icon: "home",
+            name: "导航一",
+            link: "/pages/index",
+            link_type: "",
+            currentSelected:true
+          },
+          {
+            icon: "gouwuche",
+            name: "导航二",
+            link: "/pages/order",
+            link_type: ""
+          },
+          {
+            icon: "user",
+            name: "导航三",
+            link: "/pages/member",
+            link_type: ""
+          }
+        ]
+      }
+    },
+    {
+      name: '地址电话',
+      icon: 'address1',
+      type: 'contactInformation',
+      options: {
+        dialogVisible: false,
+        styles: '1',
+        background: '#fff',
+        items: [
+          { name: '电话', phoneNum: '010-88888888', icon: 'dianhuahover', image: '', type: '1' },
+          { name: '导航', icon: 'dingwei1', image: '', type: '1' }
+        ]
+      }
+    },
+    {
+      name: '地址电话',
+      icon: 'address2',
+      type: 'contactInformation',
+      options: {
+        dialogVisible: false,
+        styles: '2',
+        background: '#fff',
+        items: [
+          { name: '电话', phoneNum: '010-88888888', icon: 'dianhuahover', image: '', type: '1' },
+          { name: '导航', icon: 'dingwei1', image: '', type: '1' }
+        ]
+      }
+    },
+    {
+      name: '地址电话',
+      icon: 'address3',
+      type: 'contactInformation',
+      options: {
+        dialogVisible: false,
+        styles: '3',
+        background: '#fff',
+        items: [
+          { name: '电话', phoneNum: '010-88888888', icon: 'dianhuahover', image: '', type: '1' },
+          { name: '导航', icon: 'dingwei1', image: '', type: '1' }
+        ]
+      }
     }
     // {
     //   name: '文本',

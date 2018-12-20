@@ -22,22 +22,22 @@ const tabBarData = {
             }
         ]
     },
-    tab2: {
-        selectedColor: '#e02828',
-        color: '#a4a4a4',
-        data: [
-            {
-                pageName: '/pages/shop-detail',
-                text: '首页',
-                iconName: 'icon-home',
-                currentSelected: true
-            },
-            {
-                pageName: '/pages/all-goods',
-                text: '全部商品',
-                iconName: 'icon-goods'
-            }
-        ]
-    }
+    // tab2: {
+    //     selectedColor: '#e02828',
+    //     color: '#a4a4a4',
+    //     data: [
+    //         {
+    //             pageName: '/pages/shop-detail',
+    //             text: '首页',
+    //             iconName: 'icon-home',
+    //             currentSelected: true
+    //         },
+    //         {
+    //             pageName: '/pages/all-goods',
+    //             text: '全部商品',
+    //             iconName: 'icon-goods'
+    //         }
+    //     ]
+    // }
 }
 export default tabBarData

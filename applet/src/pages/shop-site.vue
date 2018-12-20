@@ -9,7 +9,7 @@
             <!--&lt;!&ndash; <div class="header-right">按照距离排序</div> &ndash;&gt;-->
         <!--</div>-->
         <div class="site-content">
-            <div class="content-choice" v-for="item in newSites" :key="index" >
+            <div class="content-choice" v-for="(item,index) in newSites" :key="index" >
                 <div v-show="item.state == true"><wk-icon type="duihao2" size="32" color="#D0021B"></wk-icon></div>
                 <div v-show="item.state !== true"><wk-icon type="yuanquanweixuanfuben" size="32" ></wk-icon></div>
                 <div class="choice-r" @click="toRestaurants(index)">

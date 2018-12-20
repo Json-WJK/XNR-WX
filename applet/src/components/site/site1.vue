@@ -2,14 +2,14 @@
     <div class="site1" style="margin:10rpx;">
         <div class="body" @click="getLocation">
             <div class="icon">
-                <span><wk-icon type='dingwei1' color="#333" size="50"></wk-icon></span>
+                <span><wk-icon :type="options.items[1].icon" color="#333" size="50"></wk-icon></span>
             </div>
             <div class="body-l">
                 <div class="">距离最近：店名(某某分店)</div>
                 <div class="site">北京市大兴区中关村天华大街启航大厦3楼</div>
             </div>
             <div class="body-r">
-                <span @click.stop="call"><wk-icon type="dianhuahover" color="#CECECE" size="60"></wk-icon></span>
+                <span @click.stop="call"><wk-icon :type="options.items[0].icon" color="#CECECE" size="60"></wk-icon></span>
             </div>
         </div>
     </div>
@@ -17,6 +17,9 @@
 <script>
 import wkIcon from '../icon'
     export default{
+        props:{
+            options:Object  
+        },
         components:{
             wkIcon
         },
@@ -37,11 +40,14 @@ import wkIcon from '../icon'
                 },
                 call(){
                     wx.makePhoneCall({
-                        phoneNumber: '123456'
+                        phoneNumber: this.options.items[0].phoneNum
                     })
                 }
             }
-        }
+        },
+        created(){
+            console.log(this.options)
+        },
     }
 </script>
 <style lang="scss" scoped>

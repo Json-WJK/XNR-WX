@@ -186,6 +186,8 @@
 
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
     .wrap-integral{
+        box-sizing: border-box;
+        padding-bottom:96rpx;
         width: 100%
         .integral-header{
             width: 100%

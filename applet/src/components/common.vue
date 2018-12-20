@@ -1,10 +1,10 @@
 <template>
     <div>
-        <tab-ber name="tab1"></tab-ber>
+        <!-- <tab-ber :options="options.options" v-if="options.type === 'navBottom'"></tab-ber> -->
         <memu v-if="options.type === 'carousel' && options.options.styles === '1'"></memu>
-        <site1 v-if="options.type === 'carousel' && options.options.styles === '1'"></site1>
-        <site2 v-if="options.type === 'carousel' && options.options.styles === '1'"></site2>
-        <site3 v-if="options.type === 'carousel' && options.options.styles === '1'"></site3>
+        <site1 :options="options.options" v-if="options.type === 'contactInformation' && options.options.styles === '1'"></site1>
+        <site2 :options="options.options" v-if="options.type === 'contactInformation' && options.options.styles === '2'"></site2>
+        <site3 :options="options.options" v-if="options.type === 'contactInformation' && options.options.styles === '3'"></site3>
         <discount1 :options="options" v-if="options.type === 'carousel' && options.options.styles === '1'"></discount1>
         <discount2 :options="options" v-if="options.type === 'carousel' && options.options.styles === '1'"></discount2>
         <discount3 :options="options" v-if="options.type === 'carousel' && options.options.styles === '1'"></discount3>

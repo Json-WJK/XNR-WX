@@ -6,7 +6,7 @@
                 <div class="site">北京市大兴区中关村天华大街启航大厦3楼</div>
             </div>
             <div class="body-r">
-                <span @click.stop="call"><wk-icon type="dianhuahover" color="#CECECE" size="60"></wk-icon></span>
+                <span @click.stop="call"><wk-icon :type="options.items[0].icon" color="#CECECE" size="60"></wk-icon></span>
             </div>
         </div>
     </div>
@@ -16,6 +16,9 @@ import wkIcon from '../icon'
     export default{
         components:{
             wkIcon                  
+        },
+        props:{
+            options:Object  
         },
         data(){
             return{
@@ -37,7 +40,7 @@ import wkIcon from '../icon'
             },
             call(){
                 wx.makePhoneCall({
-                    phoneNumber: '123456'
+                    phoneNumber: this.options.items[0].phoneNum
                 })
             }
         }

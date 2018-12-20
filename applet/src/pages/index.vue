@@ -1,10 +1,12 @@
 <template>
     <div class="container">
         <common v-for="(item, index) in config" :key="index" :options="item"></common>
+        <tab-ber at=0></tab-ber>
     </div>
 </template>
 
 <script>
+    import tabBer from '../components/tabBer/tabBer.vue'
     import { getCategories, getFoods, getExtJson } from '@/api'
     import common from '../components/common'
     import data from '../data.js'
@@ -15,7 +17,8 @@
             }
         },
         components: {
-            common
+            common,
+            tabBer
         },
         methods: {
 
@@ -43,5 +46,8 @@
 </script>
 
 <style scoped lang="scss">
-    
+    .container{
+        box-sizing: border-box;
+        padding-bottom:96rpx;
+    }
 </style>

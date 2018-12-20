@@ -1,8 +1,8 @@
 <template>
     <div class="tabBer">
-        <div v-for="(item,index) in navData.data" :key="index" :style="item.currentSelected?{color:navData.selectedColor}:{color:navData.color}" class="el" @click="currentBar(index,item.pageName)">
-            <span><wk-icon :type="item.iconName" size="48"></wk-icon></span>
-            <div>{{item.text}}</div>
+        <div v-for="(item,index) in navData.items" :key="index" :style="item.currentSelected?{color:navData.selectColor}:{color:navData.color,background:navData.background}" class="el" @click="currentBar(index,item.link)">
+            <span><wk-icon :type="item.icon" size="48"></wk-icon></span>
+            <div>{{item.name}}</div>
         </div>
     </div>
 </template>
@@ -14,8 +14,8 @@ import wkIcon from '../icon'
             wkIcon
         },
         props:{
-            name:String,
-            default:'tab1'
+            options:Object,
+            at:Number
         },
         data(){
             return{
@@ -26,9 +26,13 @@ import wkIcon from '../icon'
             ...mapState({
                 navData(state) {
                     console.log(state)
-                    console.log(state[this.name])
+                    for(let item in state){
+                        if(state[item].type=="navBottom"){
+                            console.log(state[item])
+                            return state[item].options
+                        }
+                    }
                     // console.log(this.$state.)
-                    return state[this.name]
                 },
             }),
         },
@@ -41,7 +45,7 @@ import wkIcon from '../icon'
                 if(this.$router.currentRoute.path !== `${url}`){
 
                     this.setCurrentBar({
-                        name: this.name,
+                        type:'navBottom',
                         index
                     })
                     this.$router.replace({
@@ -52,12 +56,13 @@ import wkIcon from '../icon'
             }
         },
         created(){
-            
+            console.log(this.at)
         }
     }
 </script>
 <style lang="scss" scoped>
     .tabBer{
+        margin-top:96rpx;
         position:fixed;
         bottom:0;
         z-index:999;

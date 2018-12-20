@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import wx from 'wx'
-import tabBarData from './tabbar'
+import tabBarData from '../data'
 
 Vue.use(Vuex)
 
@@ -31,7 +31,7 @@ const store = new Vuex.Store({
             state.paymentShoppingCart = data
         },
         tabBarChange(state, data) {
-            
+            state.tabBarData = data.newTabbar
         }
     },
     actions: {
@@ -75,15 +75,21 @@ const store = new Vuex.Store({
             commit('remarks', data)
         },
         setCurrentBar({ commit, state }, data) {
-            // 设置tabbar高亮
-            let newTabbar = tabBarData[data.name]
+            var newTabbar = []
+            for(let item in state){
+                if(tabBarData[item].type == data.type ){
+                    newTabbar = tabBarData[item]
+                    console.log(newTabbar)
+                    break 
+                }   
+            }
             if (newTabbar) {
-                newTabbar.data.forEach((item, key) => {
+                newTabbar.options.items.forEach((item, key) => {
                     item.currentSelected = data.index == key
                 })
                 newTabbar = JSON.parse(JSON.stringify(newTabbar))
-                commit('tabChange', {
-                    name: data.name,
+                commit('tabBarChange', {
+                    type: data.type,
                     newTabbar
                 })
             }

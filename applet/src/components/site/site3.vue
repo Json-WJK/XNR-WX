@@ -6,7 +6,7 @@
                 <div class="site">北京市大兴区中关村天华大街启航大厦3楼</div>
             </div>
             <div class="body-r">
-                <span><wk-icon type="daohangtubiao" color="#CECECE" size="55"></wk-icon></span>
+                <span><wk-icon :type="options.items[1].icon" color="#CECECE" size="55"></wk-icon></span>
             </div>
         </div>
     </div>
@@ -16,6 +16,9 @@ import wkIcon from '../icon'
     export default{
         components:{
             wkIcon
+        },
+        props:{
+            options:Object  
         },
         data(){
             return{

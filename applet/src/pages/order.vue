@@ -3,8 +3,12 @@
 page {
     background: #f5f5f5;
 }
-
+.order_wrap{
+    box-sizing: border-box;
+    padding-bottom:96rpx;
+}
 .order {
+    
     &_tabbar {
         width: 100%;
         position: fixed;
@@ -196,7 +200,7 @@ page {
                     :balance=balance :balanceNo=balanceNo
                     @dialogpayClick=dialogpayClick @topUp=topUp>
         </wk-dialog-pay>
-        <tab-ber name="tab1"></tab-ber>
+        <tab-ber at=1></tab-ber>
     </div>
 </template>
 
