@@ -7,7 +7,7 @@
 
 <script>
     import tabBer from '../components/tabBer/tabBer.vue'
-    import { getCategories, getFoods, getExtJson } from '@/api'
+    import { getCategories, getFoods, getExtJson,getwxconfig } from '@/api'
     import common from '../components/common'
     import data from '../data.js'
     export default {
@@ -29,17 +29,22 @@
             // }),
             this.config = wx.getExtConfigSync ? wx.getExtConfigSync().config : {}
             this.config = data
-            console.log(data)
-            // getCategories().then(res => {
-            //     console.log(res)
-            // })
-            // getFoods({typeId:1,restaurantId:1}).then(res => {
-            //     console.log(res)
-            // })
+            // console.log(data)
+            getCategories().then(res => {
+                console.log(res)
+            })
+            getCategoriess().then(res => {
+                console.log(res)
+            })
+            getFoods({typeId:1,restaurantId:1}).then(res => {
+                console.log(res)
+            })
             // getExtJson().then(res => {
             //     console.log(res)
             // })
-            
+            getwxconfig(1,2).then(res => {
+                console.log(res)
+            })
             //console.log(wx.getExtConfigSync())
         }
     }

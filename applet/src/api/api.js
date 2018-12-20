@@ -6,6 +6,17 @@ const getExtJson = () => new Ext()
 const EXT = getExtJson()
 console.log(EXT);
 
+
+/*测试获取微信配置数据 */
+const getwxconfig = (operate,ext) => {
+    return request.put(`/wechat-config/56`, {
+            config_id: getExtJson().config_id,
+            operate,
+            ext
+        }).then(res => res.data)
+}
+
+
 // 获取openid
 const getOpenid = (code, type) => {
     return new Promise((resolve, reject) => {
@@ -347,5 +358,6 @@ export {
     isLogin,
     register,
     cancelOrder,
-    getFocus
+    getFocus,
+    getwxconfig
 }
