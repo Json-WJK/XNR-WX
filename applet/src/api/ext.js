@@ -8,6 +8,7 @@ export default class Extjson {
             this.img_host = extConfig.img_host
             this.config_id = extConfig.config_id
             this.merchant_id = extConfig.merchant_id
+            console.log(extConfig)
             // 获取轮播图数据
             // this.swiper = this.getSwiper(extConfig)
             // 获取menu数据

@@ -16,7 +16,7 @@
         data(){
             return{
                 type:"sousuo",
-                size:30,
+                size:36,
                 color:'#535353'
             }
         }
@@ -29,10 +29,11 @@
         padding:10rpx 0;
         width:100%;
         height:60rpx;
+        font-size:15px;
         .icon{
             position: absolute;
             top:50%;
-            margin-top:-15rpx;
+            margin-top:-20rpx;
             margin-left:70rpx;
             z-index:2;
         }
@@ -41,6 +42,7 @@
             top:0;bottom:0;left:0;right:0;
             margin:auto;
             width:90%;
+            height:70%;
             background:#F5F5F5;
             border-radius: 25rpx;
             padding-left:80rpx;

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import tabBer from '../components/tabBer/tabBer.vue'
+    import tabBer from '../components/tabBer/tabBer'
     import { getCategories, getFoods, getExtJson,getwxconfig } from '@/api'
     import common from '../components/common'
     import data from '../data.js'

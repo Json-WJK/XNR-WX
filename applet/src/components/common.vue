@@ -28,13 +28,13 @@
         <custom-swiper3 :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '3'"></custom-swiper3>
         <custom-swiper2 :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '2'"></custom-swiper2>
         <custom-swiper1 :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-swiper1>
-        <ad :options="options" v-if="options.name === 'ad'"></ad>
-        <custom-label :options="options" v-if="options.name === 'label'"></custom-label>
-        <custom-list-one :options="options" v-if="options.name === 'listOne'"></custom-list-one>
-        <custom-list-two :options="options" v-if="options.name === 'listTwo'"></custom-list-two>
-        <custom-list-three :options="options" v-if="options.name === 'listThree'"></custom-list-three>
-        <custom-list-four :options="options" v-if="options.name === 'listFour'"></custom-list-four>
-        <custom-list-five :options="options" v-if="options.name === 'listFive'"></custom-list-five>
+        <ad :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></ad>
+        <custom-label :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-label>
+        <custom-list-one :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-list-one>
+        <custom-list-two :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-list-two>
+        <custom-list-three :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-list-three>
+        <custom-list-four :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-list-four>
+        <custom-list-five :options="options.options" v-if="options.type === 'carousel' && options.options.styles === '1'"></custom-list-five>
     </div>
 </template>
 

@@ -25,7 +25,7 @@
 <style lang="stylus" type="text/stylus" rel="stylesheet/stylus">
     @font-face {
         font-family: "wack";
-        src: url('//at.alicdn.com/t/font_944094_kna68qefbp8.ttf?t=1544687362467') format('embedded-opentype')
+        src: url('//at.alicdn.com/t/font_883451_4r9msw93bp6.ttf?t=1544685999641') format('embedded-opentype')
     }
 
     .wack {

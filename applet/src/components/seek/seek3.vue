@@ -27,6 +27,7 @@
         background:#fff;
         padding:10rpx 0;
         width:100%;
+        font-size:15px;
         div{
             width:90%;
             margin:0 auto;
