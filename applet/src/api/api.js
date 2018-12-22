@@ -8,13 +8,10 @@ console.log(EXT);
 
 
 /*测试获取微信配置数据 */
-const getwxconfig = (operate,ext) => {
-    return request.put(`/wechat-config/56`, {
-            config_id: getExtJson().config_id,
-            operate,
-            ext
-        }).then(res => res.data)
-}
+// const getwxconfig = () => {
+//     return request.post(`http://127.0.0.1:1997/user/wx_data`, {
+//         }).then(res => res.data)
+// }
 
 
 // 获取openid

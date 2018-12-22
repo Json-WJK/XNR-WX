@@ -9,7 +9,7 @@
             :style="{height: options.height*2 + 'rpx'}"
             @change="current"
         >
-            <block v-for="(item,index) in options.items[0].list" :key="index">
+            <block v-for="(item,index) in option.list" :key="index">
                 <swiper-item>
                     <img :src="item.imageUrl" class="imgs" @click="navigation(index)">
                 </swiper-item>    
@@ -33,26 +33,34 @@
                 swiperCurrent:'0',
             }
         },
+        computed:{
+            option(){
+                for (var item of this.options.items){
+                    if(item.active){
+                        return item
+                    }
+                    
+                } 
+            }
+        },
         methods:{
             current(e){
                 this.swiperCurrent=e.mp.detail.current
             },
             ify(move){
                 let index = this.swiperCurrent
-                let length = this.options.items[0].list.length-1
+                let length = this.option.list.length-1
                 if(move == "last"){
                     if(this.swiperCurrent == 0)
                     this.swiperCurrent = length
                     else
                     this.swiperCurrent=index-1
-                    console.log(this.swiperCurrent)
                 }
                 else if(move == "next"){
                     if(this.swiperCurrent == length)
                     this.swiperCurrent = 0
                     else
                     this.swiperCurrent = index+1
-                    console.log(this.swiperCurrent)
                 }  
             },
             navigation(i){

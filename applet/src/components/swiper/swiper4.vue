@@ -9,7 +9,7 @@
             indicator-dots
             circular
         >
-            <block v-for="(item,index) in options.items[0].list" :key="index">
+            <block v-for="(item,index) in option.list" :key="index">
                 <swiper-item>
                     <img :src="item.imageUrl" class="imgs" @click="navigation(index)">
                 </swiper-item>    
@@ -23,13 +23,21 @@
         props: {
             options: Object
         },
+        computed:{
+            option(){
+                for (var item of this.options.items){
+                    if(item.active){
+                        return item
+                    }
+                } 
+            }
+        },
         methods: {
             navigation(i){
                 this.$router.push({path:'/pages/integral',isTab: true})
             }
         },
         mounted() {
-            console.log(this.options)
         },
     }
 </script>

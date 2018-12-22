@@ -20,6 +20,15 @@ const data = [
             { linkType: '', linkUrl: '', imageUrl: 'http://freephotos.online/wp-content/uploads/50208-abstract-banner.jpg' },
             { linkType: '', linkUrl: '', imageUrl: 'http://freephotos.online/wp-content/uploads/50208-abstract-banner.jpg' }
           ]
+        },
+        {
+          type: 1,
+          active: false,
+          list: [
+            { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' },
+            { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' },
+            { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' }
+          ]
         }]
       }
     },
@@ -38,11 +47,20 @@ const data = [
           // 轮播图
           items: [{
             type: 1,
-            active: true,
+            active: false,
             list: [
               { linkType: '', linkUrl: '', imageUrl: 'http://freephotos.online/wp-content/uploads/50208-abstract-banner.jpg' },
               { linkType: '', linkUrl: '', imageUrl: 'http://freephotos.online/wp-content/uploads/50208-abstract-banner.jpg' },
               { linkType: '', linkUrl: '', imageUrl: 'http://freephotos.online/wp-content/uploads/50208-abstract-banner.jpg' }
+            ]
+          },
+          {
+            type: 1,
+            active: true,
+            list: [
+              { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' },
+              { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' },
+              { linkType: '', linkUrl: '', imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3365018759,2226705862&fm=27&gp=0.jpg' }
             ]
           }]
         }

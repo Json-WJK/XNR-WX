@@ -35,6 +35,11 @@ import wkIcon from '../icon'
                             const speed = res.speed
                             const accuracy = res.accuracy
                             console.log(res)
+                            wx.openLocation({
+                                latitude,
+                                longitude,
+                                scale: 18
+                            })
                         }
                     })
                 },

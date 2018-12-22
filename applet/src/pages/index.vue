@@ -27,24 +27,25 @@
             // wx.setNavigationBarTitle({
             //     title: '动态修改的页面'
             // }),
-            this.config = wx.getExtConfigSync ? wx.getExtConfigSync().config : {}
-            this.config = data
             // console.log(data)
-            getCategories().then(res => {
-                console.log(res)
-            })
-            getCategoriess().then(res => {
-                console.log(res)
-            })
-            getFoods({typeId:1,restaurantId:1}).then(res => {
-                console.log(res)
-            })
+            // getCategories().then(res => {
+            //     console.log(res)
+            // })
+            // getCategoriess().then(res => {
+            //     console.log(res)
+            // })
+            // getFoods({typeId:1,restaurantId:1}).then(res => {
+            //     console.log(res)
+            // })
             // getExtJson().then(res => {
             //     console.log(res)
             // })
-            getwxconfig(1,2).then(res => {
-                console.log(res)
-            })
+            this.config = wx.getExtConfigSync ? wx.getExtConfigSync().config : {}
+            this.config = data
+            // getwxconfig().then(res => {
+            //     this.config = res.data
+            //     console.log(res)
+            // })
             //console.log(wx.getExtConfigSync())
         }
     }
